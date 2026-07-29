@@ -1,0 +1,54 @@
+{
+  "name": "Example research and innovation project",
+  "summary": "Describe the project, the problem it solves, the expected research and innovation results, the target users, and the intended European impact.",
+  "objectives": [
+    "State the first measurable project objective.",
+    "State the second measurable project objective."
+  ],
+  "keywords": [
+    "main research topic",
+    "expected impact",
+    "target community"
+  ],
+  "technologies": [
+    "technology or method one",
+    "technology or method two"
+  ],
+  "domains": [
+    "scientific or industrial domain"
+  ],
+  "applicant_types": [
+    "SME",
+    "university",
+    "research organisation",
+    "international consortium"
+  ],
+  "countries": [
+    "European Union"
+  ],
+  "target_trl_start": 2,
+  "target_trl_end": 5,
+  "duration_months": 36,
+  "preferred_funding_types": [
+    "research grant",
+    "innovation grant",
+    "postdoctoral fellowship",
+    "doctoral network",
+    "staff exchange"
+  ],
+  "needs": {
+    "personnel_roles": [
+      "postdoctoral researcher",
+      "doctoral researcher",
+      "research software engineer",
+      "data steward"
+    ],
+    "funding_types": [
+      "salary",
+      "personnel costs",
+      "research fellowship",
+      "mobility allowance",
+      "secondment"
+    ]
+  }
+}

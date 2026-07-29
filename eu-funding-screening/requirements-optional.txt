@@ -1,0 +1,3 @@
+# HTML discovery and matching use only Python's standard library.
+# This optional dependency enables text extraction from call documents in PDF.
+pypdf>=6.0,<7

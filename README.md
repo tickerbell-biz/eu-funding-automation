@@ -7,8 +7,9 @@ and competitions.
 ## Modules
 
 - [`eu-funding-screening/`](eu-funding-screening/) — a reproducible directory
-  of 1,200 unique European funding-source domains, with an update program and
-  validation report.
+  of 1,200 unique European funding-source domains, with an update program,
+  project-to-call matching crawler, manpower-funding classification, and
+  validation reports.
 
 ## Status
 

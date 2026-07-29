@@ -10,7 +10,7 @@ funding opportunities.
 - `build_eu_funding_sources.py` — the reproducible collection and update program.
 - `eu_funding_sources_validation.json` — row, domain, country, and language checks.
 - `find_funding.py` — crawls the directory and ranks live calls against a project.
-- `lumina_project.json` — a complete example input for the LUMINA project.
+- `project_template.json` — a public template for any project description.
 - `requirements-optional.txt` — enables text extraction from PDF call documents.
 - `tests/test_find_funding.py` — deterministic tests for matching and classification.
 
@@ -100,7 +100,7 @@ publish reliable modification metadata.
 
 The funding finder accepts either:
 
-- a structured JSON project profile such as `lumina_project.json`; or
+- a structured JSON project profile based on `project_template.json`; or
 - a plain `.txt`/`.md` project description, from which it derives search terms.
 
 HTML scanning uses only Python 3.10+. To include PDF call documents:
@@ -113,21 +113,21 @@ Run a short smoke test first:
 
 ```bash
 python3 find_funding.py \
-  --project lumina_project.json \
+  --project project_template.json \
   --sources eu_funding_sources_1200.csv \
   --limit 20 \
-  --output lumina_matches_smoke_test.csv \
-  --report lumina_search_smoke_test.json
+  --output project_matches_smoke_test.csv \
+  --report project_search_smoke_test.json
 ```
 
 Then search all 1,200 source domains:
 
 ```bash
 python3 find_funding.py \
-  --project lumina_project.json \
+  --project /private/path/my_project.json \
   --sources eu_funding_sources_1200.csv \
-  --output lumina_funding_matches.csv \
-  --report lumina_funding_search_report.json \
+  --output project_funding_matches.csv \
+  --report project_funding_search_report.json \
   --workers 12 \
   --timeout 12 \
   --max-pages-per-domain 8

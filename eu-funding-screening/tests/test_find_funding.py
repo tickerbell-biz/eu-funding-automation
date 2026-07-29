@@ -15,10 +15,10 @@ SPEC.loader.exec_module(MODULE)
 class FundingFinderTests(unittest.TestCase):
     def setUp(self):
         self.project = MODULE.ProjectProfile(
-            name="LUMINA",
-            summary="Evidence intelligence for research infrastructures",
-            keywords=["evidence intelligence", "research infrastructure"],
-            technologies=["large language models", "knowledge graph"],
+            name="Example AI research project",
+            summary="AI evidence systems for research data infrastructure",
+            keywords=["AI evidence", "research data infrastructure"],
+            technologies=["language model", "knowledge graph"],
             applicant_types=["SME", "university"],
             personnel_roles=["postdoctoral researcher"],
             preferred_funding_types=["fellowship", "research grant"],
@@ -31,12 +31,12 @@ class FundingFinderTests(unittest.TestCase):
             language="English",
         )
 
-    def test_lumina_msca_match_and_manpower_classification(self):
+    def test_ai_project_msca_match_and_manpower_classification(self):
         parsed = MODULE.ParsedPage(
             title="MSCA Postdoctoral Fellowships 2027 — Open Call",
             text=(
                 "Applications open. This postdoctoral fellowship supports research "
-                "in large language models, knowledge graph and evidence intelligence. "
+                "in language models, knowledge graph and AI evidence systems. "
                 "The researcher receives a salary and mobility allowance. "
                 "Deadline: 9 September 2027. Up to EUR 250,000."
             ),
@@ -76,7 +76,7 @@ class FundingFinderTests(unittest.TestCase):
             "closed",
         )
 
-    def test_generic_funder_page_is_not_a_lumina_match(self):
+    def test_generic_funder_page_is_not_a_project_match(self):
         parsed = MODULE.ParsedPage(
             title="Our Grants and Competitions",
             text=(
